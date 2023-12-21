@@ -4,7 +4,11 @@ import chalk from 'chalk';
 const input = process.argv;
 const printMeaning = async(word)=>{
 try{
-    if(input[2]){
+if(input[2]==='-v'){
+        console.log("v1.1.1")
+  }
+else if(input[2]!=='-v'){
+    console.log("Fetching please wait......")
     const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
         );
