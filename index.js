@@ -2,10 +2,18 @@
 import chalk from 'chalk';
 //Fetch Location:  https://api.dictionaryapi.dev/api/v2/entries/en/<word>
 const input = process.argv;
+const currentVersion = "1.1.1"
 const printMeaning = async(word)=>{
 try{
-if(input[2]==='-v'){
-        console.log("v1.1.1")
+if(input[2]=="-h"){
+console.log(".......Help Doc.......");
+console.log("Possible commands:")
+console.log("word-meaning -h : To show the package help page")
+console.log("word-meaning -v : To show the package current version")
+console.log("word-meaning <word>: To show the meaning of the <word>")
+    }
+else if(input[2]==='-v'){
+        console.log(`v${currentVersion}`)
   }
 else if(input[2]!=='-v'){
     console.log("Fetching please wait......")
