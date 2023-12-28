@@ -2,7 +2,7 @@
 import chalk from 'chalk';
 //Fetch Location:  https://api.dictionaryapi.dev/api/v2/entries/en/<word>
 const input = process.argv;
-const currentVersion = "1.1.1"
+const currentVersion = "1.2.0"
 const printMeaning = async(word)=>{
 try{
 if(input[2]=="-h"){
